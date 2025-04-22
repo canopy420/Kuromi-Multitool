@@ -57,4 +57,10 @@ PLEASE NOTE THAT THIS IS NOT THE FINAL VERSION, THIS IS NOT EVEN THE BETA OF THE
 
 ![image](https://github.com/user-attachments/assets/f3c084bf-3a8f-441c-86b5-0437c342315f)
 
+# Credits / Special Thanks
+
+Britec & Dave Kirkwood for the Edge script
+@nikoriki for beta testing
+
+
 
