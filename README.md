@@ -12,42 +12,7 @@ And yes, the name comes from the Sanrio charcter, i like her.
 
 # Features
 
-Kuromi
-│
-├── 1. System Optimization
-│   ├── [1] Clean Temporal Files and Logs
-│   ├── [2] Disable Windows Telemetry
-│   ├── [3] Remove Windows Bloatware
-│   └── [4] Deactivate Unnecessary Services
-│
-├── 2. System Management
-│   ├── [1] Check Network Traffic
-│   ├── [2] Check All System Info
-│   ├── [3] Disinfect
-│   └── [4] Fix Internet Problems
-│
-├── 3. Program Installer Downloader
-│   ├── [1] Download Chrome
-│   ├── [2] Download Firefox
-│   ├── [3] Download VLC
-│   ├── [4] Download 7zip
-│   ├── [5] Download Discord
-│   ├── [6] Download VSCodium
-│   ├── [7] Download VS Code
-│   ├── [8] Download Visual Studio Community
-│   ├── [9] Download Spotify
-│   ├── [10] Download Steam
-│   ├── [11] Download DirectX End-User Runtime
-│   ├── [12] Download Visual C++ Redistributable (x64)
-│   ├── [13] Download .NET Desktop Runtime (x64)
-│   ├── [14] Download WinRAR (64-bit)
-│   └── [15] Download qBittorrent (64-bit)
-│
-├── 4. Miscellaneous
-    ├── [1] Check Errors in Disk
-    ├── [2] Setup Virtual RAM
-    ├── [3] Defragment Disk
-    └── [4] Remove Microsoft Edge
+Kuromi │ ├── 1. System Optimization │ ├── [1] Clean Temporal Files and Logs │ ├── [2] Disable Windows Telemetry │ ├── [3] Remove Windows Bloatware │ └── [4] Deactivate Unnecessary Services │ ├── 2. System Management │ ├── [1] Check Network Traffic │ ├── [2] Check All System Info │ ├── [3] Disinfect │ └── [4] Fix Internet Problems │ ├── 3. Program Installer Downloader │ ├── [1] Download Chrome │ ├── [2] Download Firefox │ ├── [3] Download VLC │ ├── [4] Download 7zip │ ├── [5] Download Discord │ ├── [6] Download VSCodium │ ├── [7] Download VS Code │ ├── [8] Download Visual Studio Community │ ├── [9] Download Spotify │ ├── [10] Download Steam │ ├── [11] Download DirectX End-User Runtime │ ├── [12] Download Visual C++ Redistributable (x64) │ ├── [13] Download .NET Desktop Runtime (x64) │ ├── [14] Download WinRAR (64-bit) │ └── [15] Download qBittorrent (64-bit) │ └── 4. Miscellaneous ├── [1] Check Errors in Disk ├── [2] Setup Virtual RAM ├── [3] Defragment Disk └── [4] Remove Microsoft Edge
 
 PLEASE NOTE THAT THIS IS NOT THE FINAL VERSION, THIS IS NOT EVEN THE BETA OF THE SCRIPT.
 
