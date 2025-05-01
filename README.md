@@ -17,6 +17,7 @@ And yes, the name comes from the Sanrio charcter, i like her.
 - [2] Disable Windows Telemetry
 - [3] Remove Windows Bloatware
 - [4] Deactivate Unnecessary Services
+- [5] Deactivate Windows Gaming mode and Game bar
 
 ## 2. System Management
 - [1] Check Network Traffic
@@ -33,26 +34,30 @@ And yes, the name comes from the Sanrio charcter, i like her.
 - [6] Download VSCodium
 - [7] Download VS Code
 - [8] Download Visual Studio Community
-- [9] Download Spotify
-- [10] Download Steam
-- [11] Download DirectX End-User Runtime
-- [12] Download Visual C++ Redistributable (x64)
-- [13] Download .NET Desktop Runtime (x64)
-- [14] Download WinRAR (64-bit)
-- [15] Download qBittorrent (64-bit)
+- [9] Download Notepad ++
+- [10] Download Spotify
+- [11] Download Steam
+- [12] Download DirectX End-User Runtime
+- [13] Download Visual C++ Redistributable 
+- [14] Download .NET Desktop Runtime 
+- [15] Download WinRAR 
+- [16] Download qBittorrent 
 
 ## 4. Miscellaneous
 - [1] Check Errors in Disk
 - [2] Setup Virtual RAM
 - [3] Defragment Disk
 - [4] Remove Microsoft Edge
+- [4] Remove Microsoft Edge
+- [5] Remove Microsoft Copilot
+- [6] Remove Ads in File Explorer
 
 PLEASE NOTE THAT THIS IS NOT THE FINAL VERSION, THIS IS NOT EVEN THE BETA OF THE SCRIPT.
 
 # Showcase
 
 [![Showcase](https://img.youtube.com/vi/Xl9qc3Y9PhU/0.jpg)](https://www.youtube.com/watch?v=Xl9qc3Y9PhU)
-
+(v.1.0 alpha)
 
 
 ![image](https://github.com/user-attachments/assets/f3c084bf-3a8f-441c-86b5-0437c342315f)
