@@ -48,7 +48,6 @@ And yes, the name comes from the Sanrio charcter, i like her.
 - [2] Setup Virtual RAM
 - [3] Defragment Disk
 - [4] Remove Microsoft Edge
-- [4] Remove Microsoft Edge
 - [5] Remove Microsoft Copilot
 - [6] Remove Ads in File Explorer
 
