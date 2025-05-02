@@ -68,8 +68,8 @@ if %HORA_INT% LSS 12 (
 echo.
 echo canopy420.github.io
 echo.
-echo Last update: 1/5/2025
-echo Version: Alpha 1.1
+echo Last update: 03/5/2025
+echo Version: Alpha 1.2
 echo.
 echo [1] System Optimization
 echo [2] System Managment
@@ -108,15 +108,17 @@ echo [2] Disable Windows Telemetry
 echo [3] Remove Windows bloatware
 echo [4] Deactivate Unnecessary Services
 echo [5] Deactivate Windows Gaming mode and Game bar
+echo [6] Optimize Windows in general
 echo [0] Go to main menu
 echo.
-set /p option=Select an option (0-5): 
+set /p option=Select an option (0-6): 
 
 if "%option%"=="1" goto CLEAN_FILES
 if "%option%"=="2" goto TELEMETRY
 if "%option%"=="3" goto BLOATWARE
 if "%option%"=="4" goto SERVICES
 if "%option%"=="5" goto WINGAME
+if "%option%"=="6" goto OPTGEN
 if "%option%"=="0" goto MENU
 else
 goto OPTIMIZATION
@@ -386,6 +388,40 @@ echo [INFO] Game mode and Game bar deactivated succesfully
 pause
 goto OPTIMIZATION
 
+:OPTGEN
+
+echo [INFO] Reducing shutdown and app timeout delays...
+reg add "HKCU\Control Panel\Desktop" /v WaitToKillAppTimeout /t REG_SZ /d 2000 /f
+reg add "HKCU\Control Panel\Desktop" /v HungAppTimeout /t REG_SZ /d 1000 /f
+reg add "HKCU\Control Panel\Desktop" /v AutoEndTasks /t REG_SZ /d 1 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v WaitToKillServiceTimeout /t REG_SZ /d 2000 /f
+
+echo [INFO] Disabling unnecessary visual effects...
+reg add "HKCU\Control Panel\Desktop\WindowMetrics" /v MinAnimate /t REG_SZ /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" /v VisualFXSetting /t REG_DWORD /d 2 /f
+
+echo [INFO] Disabling SysMain (Superfetch) service...
+sc stop "SysMain"
+sc config "SysMain" start=disabled
+
+echo [INFO] Disabling Xbox Game Monitoring...
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\xbgm" /v Start /t REG_DWORD /d 4 /f
+
+echo [INFO] Disabling Maps and Content Delivery Manager services...
+sc stop "MapsBroker"
+sc config "MapsBroker" start=disabled
+sc stop "CDPSvc"
+sc config "CDPSvc" start=disabled
+
+echo [INFO] Disabling Tips, Tricks, and Suggestions...
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v SubscribedContent-338388Enabled /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v SubscribedContent-310093Enabled /t REG_DWORD /d 0 /f
+
+echo.
+echo [INFO] The system is now a little more faster
+pause
+goto OPTIMIZATION
+
 
 :SYSTEM
 cls
@@ -576,9 +612,10 @@ echo [3] Defragment Disk
 echo [4] Remove Microsoft Edge
 echo [5] Remove Microsoft Copilot
 echo [6] Remove Ads in File Explorer
+echo [7] Enchance privacy
 echo [0] Go to main menu
 echo.
-set /p option=Select an option (0-6): 
+set /p option=Select an option (0-7): 
 
 if "%option%"=="1" goto CHECK_DISK
 if "%option%"=="2" goto VIRT_RAM
@@ -586,6 +623,7 @@ if "%option%"=="3" goto DEFRAG_DISK
 if "%option%"=="4" goto EDGE
 if "%option%"=="5" goto COPILOT
 if "%option%"=="6" goto ADSEXPO
+if "%option%"=="7" goto PRIVACY
 if "%option%"=="0" goto MENU
 else
 goto MISC
@@ -698,6 +736,7 @@ for /f %%a in ('powershell -Command "(Get-CimInstance Win32_ComputerSystem).Tota
     set ram_mb=%%a
 )
 if defined ram_mb (
+    echo.
     echo [INFO] Your system has approximately %ram_mb% MB of RAM.
     echo.
 ) else (
@@ -939,6 +978,56 @@ pause
 goto MISC
 
 
+:PRIVACY
+cls
+echo.
+echo [INFO] Removing geolocating services and sensors...
+
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\LocationAndSensors" /v DisableLocation /t REG_DWORD /d 1 /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\LocationAndSensors" /v DisableSensors /t REG_DWORD /d 1 /f
+
+echo [INFO] Removing handwriting and typing personalization...
+
+reg add "HKCU\Software\Microsoft\InputPersonalization" /v RestrictImplicitTextCollection /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\InputPersonalization" /v RestrictImplicitInkCollection /t REG_DWORD /d 1 /f
+
+echo [INFO] Disabling Activity History (Timeline)
+
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v EnableActivityFeed /t REG_DWORD /d 0 /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v PublishUserActivities /t REG_DWORD /d 0 /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v UploadUserActivities /t REG_DWORD /d 0 /f
+
+echo [INFO] Disabling Advertising ID...
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo" /v Enabled /t REG_DWORD /d 0 /f
+
+echo [INFO] Disabling Windows Spotlight on lock screen...
+
+reg add "HKCU\Software\Policies\Microsoft\Windows\CloudContent" /v DisableWindowsSpotlightFeatures /t REG_DWORD /d 1 /f
+
+echo [INFO] Disabling suggested apps...
+
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent" /v DisableConsumerFeatures /t REG_DWORD /d 1 /f
+
+echo [INFO] Disabling cloud clipboard synchronization...
+
+reg add "HKCU\Software\Microsoft\Clipboard" /v EnableCloudClipboard /t REG_DWORD /d 0 /f
+
+echo [INFO] Disabling Cortana...
+
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v AllowCortana /t REG_DWORD /d 0 /f
+
+echo [INFO] Disabling Windows feedback prompts...
+
+reg add "HKCU\Software\Microsoft\Siuf\Rules" /v NumberOfSIUFInPeriod /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Siuf\Rules" /v PeriodInNanoSeconds /t REG_QWORD /d 0 /f
+
+echo.
+echo [INFO] The system is now more private
+pause
+goto MISC
+
+
 :PROGRAMS
 cls
 echo.
@@ -958,17 +1047,17 @@ echo [INFO] All the installers are their x64 version
 echo.
 echo [INFO] This will change the appearance of the script
 echo.
-echo [1] Chrome               	[10]  Spotify
-echo [2] Firefox               	[11] Steam
+echo [1] Chrome               	[10] Spotify				[19] Brave Browser
+echo [2] Firefox               	[11] Steam				[0] Go to Main Menu
 echo [3] VLC                   	[12] DirectX End-Use Runtime
 echo [4] 7-Zip                 	[13] Visual C++ Redistributable 
 echo [5] Discord               	[14] .NET Runtime 
 echo [6] VSCodium              	[15] WinRAR 
 echo [7] VS Code              	[16] qBittorrent 
-echo [8] Visual Studio Comm.   	[0]  Go to main menu
-echo [9] notepad ++
+echo [8] Visual Studio Comm.   	[17] Tor Browser
+echo [9] notepad ++		[18] Librewolf
 echo.
-set /p option=Select an option (0-16): 
+set /p option=Select an option (0-19): 
 
 if "%option%"=="1" goto DOWNLOAD_CHROME
 if "%option%"=="2" goto DOWNLOAD_FIREFOX
@@ -986,6 +1075,9 @@ if "%option%"=="13" goto DOWNLOAD_VCREDIST
 if "%option%"=="14" goto DOWNLOAD_DOTNET
 if "%option%"=="15" goto DOWNLOAD_WINRAR
 if "%option%"=="16" goto DOWNLOAD_QBITTORRENT
+if "%option%"=="17" goto DOWNLOAD_TOR
+if "%option%"=="18" goto DOWNLOAD_LIBREWOLF
+if "%option%"=="19" goto DOWNLOAD_BRAVE
 if "%option%"=="0" goto MENU
 else
 goto PROGRAMS
@@ -1077,6 +1169,27 @@ goto PROGRAMS
 echo [INFO] Downloading Notepad ++...
 call :download "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8/npp.8.8.Installer.x64.exe" "Notepadpp_8.8_x64.exe"
 goto PROGRAMS
+
+
+:DOWNLOAD_TOR
+echo [INFO] Downloading Tor Browser...
+call :download "https://www.torproject.org/dist/torbrowser/14.5.1/tor-browser-windows-x86_64-portable-14.5.1.exe" "Tor-Browser_x64.exe"
+goto PROGRAMS
+
+:DOWNLOAD_BRAVE
+echo [INFO] Downloading Brave Browser...
+call :download "https://laptop-updates.brave.com/download/BRV013?bitness=64" "BraveBrowserSetup-BRV013.exe"
+goto PROGRAMS
+
+
+:DOWNLOAD_LIBREWOLF
+echo [INFO] Downloading Librewolf...
+call :download "https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/135.0.1-1/librewolf-135.0.1-1-windows-x86_64-setup.exe" "Librewolf_v135.0.1-1_x64.exe"
+goto PROGRAMS
+
+
+
+
 
 
 
