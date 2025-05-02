@@ -18,6 +18,7 @@ And yes, the name comes from the Sanrio charcter, i like her.
 - [3] Remove Windows Bloatware
 - [4] Deactivate Unnecessary Services
 - [5] Deactivate Windows Gaming mode and Game bar
+- [6] Optimize Windows in general
 
 ## 2. System Management
 - [1] Check Network Traffic
@@ -41,7 +42,11 @@ And yes, the name comes from the Sanrio charcter, i like her.
 - [13] Download Visual C++ Redistributable 
 - [14] Download .NET Desktop Runtime 
 - [15] Download WinRAR 
-- [16] Download qBittorrent 
+- [16] Download qBittorrent
+- [17] Tor Browser
+- [18] Librewolf
+- [19] Brave Browser
+
 
 ## 4. Miscellaneous
 - [1] Check Errors in Disk
@@ -50,6 +55,7 @@ And yes, the name comes from the Sanrio charcter, i like her.
 - [4] Remove Microsoft Edge
 - [5] Remove Microsoft Copilot
 - [6] Remove Ads in File Explorer
+- [7] Enchance privacy
 
 PLEASE NOTE THAT THIS IS NOT THE FINAL VERSION, THIS IS NOT EVEN THE BETA OF THE SCRIPT.
 
