@@ -61,7 +61,7 @@ PLEASE NOTE THAT THIS IS NOT THE FINAL VERSION, THIS IS NOT EVEN THE BETA OF THE
 
 # Showcase
 
-[![Showcase](https://youtu.be/oAQT528ixi8)
+[![Showcase](https://img.youtube.com/vi/oAQT528ixi8/0.jpg)](https://youtu.be/oAQT528ixi8)
 (v.1.2 alpha)
 
 
