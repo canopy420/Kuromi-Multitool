@@ -61,8 +61,8 @@ PLEASE NOTE THAT THIS IS NOT THE FINAL VERSION, THIS IS NOT EVEN THE BETA OF THE
 
 # Showcase
 
-[![Showcase](https://img.youtube.com/vi/Xl9qc3Y9PhU/0.jpg)](https://www.youtube.com/watch?v=Xl9qc3Y9PhU)
-(v.1.0 alpha)
+[![Showcase](https://youtu.be/oAQT528ixi8)
+(v.1.2 alpha)
 
 
 ![image](https://github.com/user-attachments/assets/f3c084bf-3a8f-441c-86b5-0437c342315f)
