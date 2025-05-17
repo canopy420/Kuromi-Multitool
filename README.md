@@ -70,8 +70,8 @@ PLEASE NOTE THAT THIS IS NOT THE FINAL VERSION, THIS IS NOT EVEN THE BETA OF THE
 # Credits / Special Thanks
 
 Britec & Dave Kirkwood for the Edge script
+[@Nikoriki](https://info.nikota.dev/) for beta testing
 
-@nikoriki for beta testing
 
 
 
