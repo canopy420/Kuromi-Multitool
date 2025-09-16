@@ -67,6 +67,20 @@ PLEASE NOTE THAT THIS IS NOT THE FINAL VERSION, THIS IS NOT EVEN THE BETA OF THE
 
 ![image](https://github.com/user-attachments/assets/f3c084bf-3a8f-441c-86b5-0437c342315f)
 
+# FaQ
+
+## Is Kuromi safe?/Not a virus?
+
+- Why would it be? Kuromi is completely open source, which means everyone can see how the app works. If it had anything strange, it wouldn’t be open source since that would expose its real purpose.
+
+  ## Why does my antivirus detect Kuromi as a virus?
+- Some antivirus programs may flag scripts like Kuromi as false positives. This is common with tools that interact with system files or perform cleaning tasks. If this happens, you can temporarily disable your antivirus while using Kuromi. This can happen with other reputable tools like "Medicat" ffor example.
+
+## Why is Kuromi a .bat instead of having a proper source code and a UI?
+
+- Kuromi started as a fun project and as a way for me to study .bat scripting because my teacher asked us to (I guess lawmakers didn’t think of a better thing for us to learn). One of Kuromi’s objectives is also to be lightweight. Making it a .bat not only achieves that, but also gives me more opportunities to create better commands, since it’s like putting commands directly into a CMD console.
+
+
 # Credits / Special Thanks
 
 [@Nikoriki](https://info.nikota.dev/) for beta testing
