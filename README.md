@@ -1,5 +1,5 @@
 # Kuromi-Multitool
-Kuromi is a currently in Alpha script to clean, disinfect and manage your system.
+Kuromi is a currently in Beta script to clean, desinfect and manage your system, all with just a CMD tool and keeping it simple.
 
 I created Kuromi as a fun project because I was tired of having to download and do a bunch of things every time I reinstalled Windows. Also, for some reason, my teacher wanted us to learn .bat scripting, which gave me another reason to work on it. The objective of Kuromi is to simplify tedious processes and make them easier and more simple.
 I decided to make it a .bat file because it seemed like the simplest and most accessible option for anyone who wants to modify it. If you check the README file that comes with the script, you'll see that I left clear instructions for people who want to use certain parts of the script without needing to run everything it does. This way, you can customize it to your needs without any problem.
