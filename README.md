@@ -46,6 +46,7 @@ And yes, the name comes from the Sanrio charcter, i like her.
 - [17] Tor Browser
 - [18] Librewolf
 - [19] Brave Browser
+- [20] OBS Studio
 
 
 ## 4. Miscellaneous
@@ -56,16 +57,18 @@ And yes, the name comes from the Sanrio charcter, i like her.
 - [5] Remove Microsoft Copilot
 - [6] Remove Ads in File Explorer
 - [7] Enchance privacy
+- [8] Disable Windows Suggested Content
+- [9] Disable Sensor Services
+- [10] Disable Special Keys
+- [11] Fix and check Windows Image/Files
 
 PLEASE NOTE THAT THIS IS NOT THE FINAL VERSION, THIS IS NOT EVEN THE BETA OF THE SCRIPT.
 
 # Showcase
 
 [![Showcase](https://img.youtube.com/vi/oAQT528ixi8/0.jpg)](https://youtu.be/oAQT528ixi8)
-(v.1.2 alpha)
+(v.1.0 beta)
 
-
-![image](https://github.com/user-attachments/assets/f3c084bf-3a8f-441c-86b5-0437c342315f)
 
 # FaQ
 
